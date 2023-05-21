@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgba(238, 238, 238, 0.7);
+    /* background-image: linear-gradient(to bottom right, white, #9a9a9a, #565656); */
+    background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224));
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #cececeab;
+    background-image: radial-gradient(orange, purple);
+    width: 70vh;
+    height: 70vh;
+    border: 9px solid rgb(15, 15, 15);
+    border-radius: 45%;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.time{
+    background-color: rgb(78, 78, 78, .2);
+    color: rgb(0, 0, 0, .6);
+    width: 25vh;
+    height: 7vh;
+
+    font-size: 1.75rem;
+
+    margin: auto;
+    border-radius: 1.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 17vh;
+    z-index: 4;
+    user-select: none;
+
+    box-shadow: 1px 2px 5px ;
+}
+
+.center{
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+#main{
+    background-color: black;
+    width: 1vh;
+    height: 1vh;
+}
+
+#hour-center{
+    background-color: rgb(255, 0, 64);
+    width: 3vh;
+    height: 3vh;
+}
+#hour{
+    background-color: rgb(255, 0, 64);
+    width: 3vh;
+    height: 20vh;
+    /* border: 1px solid white;
+    border-bottom: none;
+    border-top: none; */
+    border-radius: 100% 100% 0 0;
+    
+    position: absolute;
+    bottom: 35vh;
+    transform-origin: 50% 100%;
+    /* z-index: 1; */
+}
+
+#minute-center{
+    background-color: rgb(160, 22, 160);
+    width: 2.25vh;
+    height: 2.25vh;
+}
+#minute{
+    background-color: rgb(160, 22, 160);
+    width: 2.25vh;
+    height: 25vh;
+    /* border: 1px solid white;
+    border-bottom: none;
+    border-top: none; */
+    border-radius: 100% 100% 0 0;
+    
+    position: absolute;
+    /* z-index: 2; */
+    bottom: 35vh;
+    transform-origin: 50% 100%;
+}
+
+#second-center{
+    background-color: orange;
+    width: 1.5vh;
+    height: 1.5vh;
+}
+#second{
+    background-color: orange;
+    width: 1.5vh;
+    height: 30vh;
+    /* border: 1px solid white;
+    border-bottom: none;
+    border-top: none; */
+    border-radius: 100% 100% 0 0;
+    
+    position: absolute;
+    /* z-index: 3; */
+    bottom: 35vh;
+    transform-origin: 50% 100%;
+}
+/* .needle{
+    box-shadow: 2px 0px 5px black;
+} */
+
+
+#dark-mode{
+
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+
+input[type=checkbox] {
+    background-color: red;
+    width: 30px;
+}
