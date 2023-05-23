@@ -3,10 +3,14 @@
     padding: 0;
 }
 
+:root{
+    --color: red;
+}
+
 header{
-    background-color: rgba(238, 238, 238, 0.7);
+    background-color: rgb(165, 165, 165);
     /* background-image: linear-gradient(to bottom right, white, #9a9a9a, #565656); */
-    background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224));
+    /* background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224)); */
     width: 100%;
     height: 100vh;
     
@@ -17,29 +21,116 @@ header{
 }
 
 .container{
-    background-color: #cececeab;
-    background-image: radial-gradient(orange, purple);
     width: 70vh;
     height: 70vh;
-    border: 9px solid rgb(15, 15, 15);
+    /* border: 9px solid rgb(15, 15, 15);
+    border-radius: 45%; */
     border-radius: 45%;
+    /* margin: 0px auto auto; */
     
     
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-
+    /* overflow: hidden; */
+    
     position: relative;
-
+    
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.time{
+
+
+.center{
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+}
+.needle{
+    border-radius: 100% 100% 0 0;
+
+    position: absolute;
+    bottom: 35vh;
+    transform-origin: 50% 100%;
+    z-index: 2;
+}
+#main-center{
+    background-color: black;
+    width: 1vh;
+    height: 1vh;
+}
+
+#hour-center{
+    background-color: rgb(62, 62, 62);
+    width: 3vh;
+    height: 3vh;
+}
+#hour{
+    background-color: rgb(62, 62, 62);
+    width: 3vh;
+    height: 20vh;
+}
+
+#minute-center{
+    background-color: rgb(95, 95, 95);
+    width: 2.25vh;
+    height: 2.25vh;
+}
+#minute{
+    background-color: rgb(112, 112, 112);
+    width: 1.5vh;
+    height: 25vh;
+}
+
+#second-center{
+    background-color: rgb(162, 162, 162);
+    width: 1.5vh;
+    height: 1.5vh;
+}
+#second{
+    background-color: rgb(162, 162, 162);
+    width: 1vh;
+    height: 30vh;
+}
+
+.num{
+    background-image: radial-gradient( rgb(255, 255, 255), rgb(157, 157, 157));
+    color: #181818;
+    width: 100%;
+    height: 100%;
+    border-radius: 45%;
+    border: 9px solid rgb(15, 15, 15);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+.num strong{
+    text-align: center;
+    position: absolute;
+    inset: 2.5vh;
+    transform: rotate( calc(var(--i) * (360deg/12)) );
+}
+strong span{
+    font-size: 2rem;
+    display: block;
+    transform: rotate( calc(var(--i) * (-360deg/12)) );
+}
+
+
+/* DIGITAL TIME */
+.time-box{
     background-color: rgb(78, 78, 78, .2);
     color: rgb(0, 0, 0, .6);
-    width: 25vh;
-    height: 7vh;
+    width: 35vh;
+    height: 8vh;
 
     font-size: 1.75rem;
 
@@ -51,100 +142,46 @@ header{
     align-items: center;
 
     position: absolute;
-    bottom: 17vh;
-    z-index: 4;
+    top: -8vh;
+    /* bottom: 17vh; */
+    z-index: 0;
     user-select: none;
 
     box-shadow: 1px 2px 5px ;
 }
 
-.center{
-    border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
+/* DARK MODE */
+header.darkmode{
+    background-color: #252525;
 }
-#main{
-    background-color: black;
-    width: 1vh;
-    height: 1vh;
+header.darkmode .container{
+    box-shadow: 2px 5px 8px rgba(84, 84, 84, 0.5);
 }
-
-#hour-center{
-    background-color: rgb(255, 0, 64);
-    width: 3vh;
-    height: 3vh;
+header.darkmode .num{
+    background-image: radial-gradient(rgb(69, 69, 69), #000000);
+    color: #efefefd8;
+    border-color: rgb(52, 52, 52);
 }
-#hour{
-    background-color: rgb(255, 0, 64);
-    width: 3vh;
-    height: 20vh;
-    /* border: 1px solid white;
-    border-bottom: none;
-    border-top: none; */
-    border-radius: 100% 100% 0 0;
-    
-    position: absolute;
-    bottom: 35vh;
-    transform-origin: 50% 100%;
-    /* z-index: 1; */
+header.darkmode #hour-center{
+    background-color: rgb(162, 162, 162);
 }
-
-#minute-center{
-    background-color: rgb(160, 22, 160);
-    width: 2.25vh;
-    height: 2.25vh;
+header.darkmode #minute-center{
+    background-color: rgb(112, 112, 112);
 }
-#minute{
-    background-color: rgb(160, 22, 160);
-    width: 2.25vh;
-    height: 25vh;
-    /* border: 1px solid white;
-    border-bottom: none;
-    border-top: none; */
-    border-radius: 100% 100% 0 0;
-    
-    position: absolute;
-    /* z-index: 2; */
-    bottom: 35vh;
-    transform-origin: 50% 100%;
+header.darkmode #second-center{
+    background-color: rgb(72, 72, 72);
 }
-
-#second-center{
-    background-color: orange;
-    width: 1.5vh;
-    height: 1.5vh;
+header.darkmode #hour{
+    background-color: rgb(162, 162, 162);
 }
-#second{
-    background-color: orange;
-    width: 1.5vh;
-    height: 30vh;
-    /* border: 1px solid white;
-    border-bottom: none;
-    border-top: none; */
-    border-radius: 100% 100% 0 0;
-    
-    position: absolute;
-    /* z-index: 3; */
-    bottom: 35vh;
-    transform-origin: 50% 100%;
+header.darkmode #minute{
+    background-color: rgb(112, 112, 112);
 }
-/* .needle{
-    box-shadow: 2px 0px 5px black;
-} */
-
-
-#dark-mode{
-
-    position: absolute;
-    bottom: 50px;
-    right: 100px;
+header.darkmode #second{
+    background-color: rgb(72, 72, 72);
 }
-
-input[type=checkbox] {
-    background-color: red;
-    width: 30px;
+header.darkmode .time-box{
+    color: rgb(255, 255, 255, .6);
+    background-color: rgb(69, 68, 68, .2);
 }
