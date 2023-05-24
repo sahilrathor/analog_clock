@@ -1,11 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
-:root{
-    --color: red;
-}
 
 header{
     background-color: rgb(165, 165, 165);
@@ -72,7 +70,7 @@ header{
 }
 #hour{
     background-color: rgb(62, 62, 62);
-    width: 3vh;
+    width: 2vh;
     height: 20vh;
 }
 
@@ -125,33 +123,9 @@ strong span{
 }
 
 
-/* DIGITAL TIME */
-.time-box{
-    background-color: rgb(78, 78, 78, .2);
-    color: rgb(0, 0, 0, .6);
-    width: 35vh;
-    height: 8vh;
-
-    font-size: 1.75rem;
-
-    margin: auto;
-    border-radius: 1.5vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: -8vh;
-    /* bottom: 17vh; */
-    z-index: 0;
-    user-select: none;
-
-    box-shadow: 1px 2px 5px ;
-}
-
 
 /* DARK MODE */
+
 header.darkmode{
     background-color: #252525;
 }
@@ -180,8 +154,4 @@ header.darkmode #minute{
 }
 header.darkmode #second{
     background-color: rgb(72, 72, 72);
-}
-header.darkmode .time-box{
-    color: rgb(255, 255, 255, .6);
-    background-color: rgb(69, 68, 68, .2);
 }

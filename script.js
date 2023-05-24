@@ -1,7 +1,8 @@
-let timePara = document.getElementById("time");
+
 const hrHand = document.getElementById("hour");
 const minHand = document.getElementById("minute");
 const secHand = document.getElementById("second");
+const header = document.getElementById("header");
 
 let time;
 let hrHandRotate;
@@ -21,7 +22,6 @@ function updateTime(){
     hrHandRotate = 0.5*minute + (hour*30);
     minHandRotate = (1/10)*second + (minute*6);
     secHandRotate = 0.006*ms+second*6;
-    timePara.innerHTML= hour + ":" + minute + ":" + second +  ":" + Math.floor(ms/100);
     rotateHand();
 }
 
@@ -29,4 +29,8 @@ function rotateHand(){
     hrHand.style.transform="rotate(" + hrHandRotate + "deg)";
     minHand.style.transform="rotate(" + minHandRotate + "deg)";
     secHand.style.transform="rotate(" + secHandRotate + "deg)";
+}
+
+function toggle() {
+    header.classList.toggle("darkmode");
 }

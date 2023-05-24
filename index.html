@@ -7,13 +7,12 @@
     <title>Clock</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle-style.css">
     
 </head>
 <body>
-    <header class="darkmofde">
-        <!-- <input type="checkbox" name="" id="dark-mode"> -->
+    <header id="header">
         <div class="container">
-            <div class="time-box"> <p id="time">Time</p> </div>
             <div class="num">
                 <strong style="--i: 12"> <span>12</span></strong>
                 <strong style="--i: 1"> <span>1</span></strong>
@@ -36,7 +35,11 @@
             <div id="second" class="needle"></div>
             <div id="main-center" class="center"></div>
         </div>
-        <div id="dark-mode"></div>
+        <div id="dark-mode"> 
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round" onclick="toggle()"></span>
+            </label></div>
     </header>
 
 
