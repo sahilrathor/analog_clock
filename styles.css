@@ -1,3 +1,194 @@
+<<<<<<< HEAD
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+header{
+    background-color: rgb(165, 165, 165);
+    /* background-image: linear-gradient(to bottom right, white, #9a9a9a, #565656); */
+    /* background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224)); */
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: radial-gradient( rgb(255, 255, 255), rgb(157, 157, 157));
+    background-color: red;
+    width: 70vmin;
+    height: 70vmin;
+    border: 9px solid rgb(15, 15, 15);
+    border-radius: 45%;
+    border-radius: 45%;
+    /* margin: 0px auto auto; */
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    
+    position: relative;
+    
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: ease all .2s;
+}
+
+
+
+.center{
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+}
+.needle{
+    border-radius: 100% 100% 0 0;
+
+    position: absolute;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    z-index: 2;
+}
+#main-center{
+    background-color: black;
+    width: 1vh;
+    height: 1vh;
+}
+
+#hour-center{
+    background-color: rgb(62, 62, 62);
+    width: 4.2%;
+    height: 4.2%;
+}
+#hour{
+    background-color: rgb(62, 62, 62);
+    /* width: 2vh; */
+    width: 2.7%;
+    height: 30%;
+}
+
+#minute-center{
+    background-color: rgb(112, 112, 112);
+    width: 3.2%;
+    height: 3.2%;
+}
+#minute{
+    background-color: rgb(112, 112, 112);
+    width: 2.1%;
+    height: 36%;
+}
+
+#second-center{
+    background-color: rgb(162, 162, 162);
+    width: 2.3%;
+    height: 2.3%;
+}
+#second{
+    background-color: rgb(162, 162, 162);
+    width: 1.5%;
+    height: 44%;
+}
+
+/* .num{
+    background-image: radial-gradient( rgb(255, 255, 255), rgb(157, 157, 157));
+    color: #181818;
+    border-radius: 45%;
+    border: 9px solid rgb(15, 15, 15);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+} */
+strong{
+    background-color: transparent;
+    height: 70vmin;
+    text-align: center;
+
+    border-radius: 50%;
+
+    position: absolute;
+    /* inset: 2.5vmin; */
+    
+    transform: rotate( calc(var(--i) * (360deg/12)) );
+}
+strong span{
+    font-size: 2rem;
+    display: block;
+    transform: rotate( calc(var(--i) * (-360deg/12)) );
+}
+
+
+
+/* DARK MODE */
+
+header.darkmode{
+    background-color: #252525;
+}
+header.darkmode .container{
+    box-shadow: 2px 5px 8px rgba(84, 84, 84, 0.5);
+    background-image: radial-gradient(rgb(69, 69, 69), #000000);
+    color: #efefefd8;
+    border-color: rgb(52, 52, 52);
+}
+/* header.darkmode .num{
+    background-image: radial-gradient(rgb(69, 69, 69), #000000);
+    color: #efefefd8;
+    border-color: rgb(52, 52, 52);
+} */
+header.darkmode #hour-center{
+    background-color: rgb(162, 162, 162);
+}
+header.darkmode #minute-center{
+    background-color: rgb(112, 112, 112);
+}
+header.darkmode #second-center{
+    background-color: rgb(72, 72, 72);
+}
+header.darkmode #hour{
+    background-color: rgb(162, 162, 162);
+}
+header.darkmode #minute{
+    background-color: rgb(112, 112, 112);
+}
+header.darkmode #second{
+    background-color: rgb(72, 72, 72);
+}
+
+
+
+
+/* FOR SMALLER SCREENS */
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 85vmin;
+        height: 85vmin;
+    }
+    strong {
+        height: 85vmin;
+    }
+
+    .switch{
+        top: 20px;
+        right: 10px;
+    }
+}
+=======
 *{
     margin: 0;
     padding: 0;
@@ -172,3 +363,4 @@ header.darkmode #second{
         right: 10px;
     }
 }
+>>>>>>> origin/main
