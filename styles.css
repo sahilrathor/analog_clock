@@ -1,17 +1,23 @@
-<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
     user-select: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
 }
 
 
 header{
+
     background-color: rgb(165, 165, 165);
     /* background-image: linear-gradient(to bottom right, white, #9a9a9a, #565656); */
     /* background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224)); */
-    width: 100vw;
-    height: 100vh;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
     
     display: flex;
     flex-direction: column;
@@ -117,7 +123,8 @@ header{
 } */
 strong{
     background-color: transparent;
-    height: 70vmin;
+    /* font-size: 2rem; */
+    height: 65vmin;
     text-align: center;
 
     border-radius: 50%;
@@ -178,9 +185,14 @@ header.darkmode #second{
     .container{
         width: 85vmin;
         height: 85vmin;
+        border-width: 6px;
     }
     strong {
-        height: 85vmin;
+        font-size: .5rem;
+        height: 75vmin;
+    }
+    strong span{
+        font-size: 1.5rem;
     }
 
     .switch{
@@ -188,179 +200,3 @@ header.darkmode #second{
         right: 10px;
     }
 }
-=======
-*{
-    margin: 0;
-    padding: 0;
-    user-select: none;
-}
-
-
-header{
-    background-color: rgb(165, 165, 165);
-    /* background-image: linear-gradient(to bottom right, white, #9a9a9a, #565656); */
-    /* background-image: linear-gradient(to top right, rgb(88, 190, 237), rgb(241, 116, 224)); */
-    width: 100vw;
-    height: 100vh;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container{
-    width: 70vmin;
-    height: 70vmin;
-    /* border: 9px solid rgb(15, 15, 15);
-    border-radius: 45%; */
-    border-radius: 45%;
-    /* margin: 0px auto auto; */
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* overflow: hidden; */
-    
-    position: relative;
-    
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: ease all .2s;
-}
-
-
-
-.center{
-    border-radius: 50%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    z-index: 2;
-}
-.needle{
-    border-radius: 100% 100% 0 0;
-
-    position: absolute;
-    bottom: 50%;
-    transform-origin: 50% 100%;
-    z-index: 2;
-}
-#main-center{
-    background-color: black;
-    width: 1vh;
-    height: 1vh;
-}
-
-#hour-center{
-    background-color: rgb(62, 62, 62);
-    width: 3vh;
-    height: 3vh;
-}
-#hour{
-    background-color: rgb(62, 62, 62);
-    width: 2vh;
-    height: 20vh;
-}
-
-#minute-center{
-    background-color: rgb(95, 95, 95);
-    width: 2.25vh;
-    height: 2.25vh;
-}
-#minute{
-    background-color: rgb(112, 112, 112);
-    width: 1.5vh;
-    height: 25vh;
-}
-
-#second-center{
-    background-color: rgb(162, 162, 162);
-    width: 1.5vh;
-    height: 1.5vh;
-}
-#second{
-    background-color: rgb(162, 162, 162);
-    width: 1vh;
-    height: 30vh;
-}
-
-.num{
-    background-image: radial-gradient( rgb(255, 255, 255), rgb(157, 157, 157));
-    color: #181818;
-    width: 100%;
-    height: 100%;
-    border-radius: 45%;
-    border: 9px solid rgb(15, 15, 15);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-}
-.num strong{
-    text-align: center;
-    position: absolute;
-    inset: 2.5vh;
-    transform: rotate( calc(var(--i) * (360deg/12)) );
-}
-strong span{
-    font-size: 2rem;
-    display: block;
-    transform: rotate( calc(var(--i) * (-360deg/12)) );
-}
-
-
-
-/* DARK MODE */
-
-header.darkmode{
-    background-color: #252525;
-}
-header.darkmode .container{
-    box-shadow: 2px 5px 8px rgba(84, 84, 84, 0.5);
-}
-header.darkmode .num{
-    background-image: radial-gradient(rgb(69, 69, 69), #000000);
-    color: #efefefd8;
-    border-color: rgb(52, 52, 52);
-}
-header.darkmode #hour-center{
-    background-color: rgb(162, 162, 162);
-}
-header.darkmode #minute-center{
-    background-color: rgb(112, 112, 112);
-}
-header.darkmode #second-center{
-    background-color: rgb(72, 72, 72);
-}
-header.darkmode #hour{
-    background-color: rgb(162, 162, 162);
-}
-header.darkmode #minute{
-    background-color: rgb(112, 112, 112);
-}
-header.darkmode #second{
-    background-color: rgb(72, 72, 72);
-}
-
-
-  
-
-/* FOR SMALLER SCREENS */
-@media only screen and (max-width: 600px) {
-    .container{
-        width: 85vmin;
-        height: 85vmin;
-    }
-
-    .switch{
-        top: 20px;
-        right: 10px;
-    }
-}
->>>>>>> origin/main
